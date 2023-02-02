@@ -90,11 +90,11 @@ class BladeInstance implements BladeInterface
         });
 
         $resolver->register("file", function () {
-            return new FileEngine(new Filesystem);
+            return new FileEngine(new Filesystem());
         });
 
         $resolver->register("php", function () {
-            return new PhpEngine(new Filesystem);
+            return new PhpEngine(new Filesystem());
         });
 
         return $resolver;
